@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="@string/preference_category_volume">
+		<CheckBoxPreference android:key="checkvolume"
+			android:defaultValue="true" android:title="@string/checkvolume_title"
+			android:summary="@string/checkvolume_summary"
+			android:disableDependentsState="true" />
+		<CheckBoxPreference android:key="volumemax"
+			android:dependency="checkvolume" android:defaultValue="true"
+			android:title="@string/volumemax_title" android:summary="@string/volumemax_summary" />
+		<CheckBoxPreference android:key="volumerestore"
+			android:dependency="volumemax" android:defaultValue="true"
+			android:title="@string/volumerestore_title" android:summary="@string/volumerestore_summary" />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="@string/preference_category_features">
+		<CheckBoxPreference android:key="autoplay"
+			android:defaultValue="true" android:title="@string/autoplay_title"
+			android:summary="@string/autoplay_summary" />
+		<CheckBoxPreference android:key="synchro"
+			android:defaultValue="true" android:title="@string/synchro_title"
+			android:summary="@string/synchro_summary" />
+		<CheckBoxPreference android:key="keepmycountry"
+			android:defaultValue="true" android:title="@string/keepmycountry_title"
+			android:summary="@string/keepmycountry_summary" />
+	</PreferenceCategory>
+</PreferenceScreen>

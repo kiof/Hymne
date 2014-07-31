@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/profileSwitcher"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:animateFirstView="true"
+    android:inAnimation="@android:anim/slide_in_left"
+    android:outAnimation="@android:anim/slide_out_right" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/ad_unit_id" />
+
+        <Gallery
+            android:id="@+id/gallery"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:fadingEdge="horizontal" />
+
+        <TextView
+            android:id="@+id/mycountry"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:gravity="center"
+            android:shadowColor="#FFFFFFFF"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="3"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:textSize="36sp" />
+
+        <ImageView
+            android:id="@+id/myflag"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:onClick="playHymne"
+            android:scaleType="fitCenter"
+            android:src="@android:drawable/ic_menu_help"
+            android:contentDescription="Flag"/>
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_margin="10sp"
+            android:gravity="center"
+            android:text="@string/message_country"
+            android:textAppearance="@android:style/TextAppearance.Small" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ImageView
+            android:id="@+id/flag"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="false"
+            android:onClick="stopHymne"
+            android:scaleType="fitCenter"
+            android:src="@android:drawable/ic_menu_help"
+            android:contentDescription="Flag"/>
+    </RelativeLayout>
+
+</ViewSwitcher>

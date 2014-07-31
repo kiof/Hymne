@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Supporter votre Pays</string>
+	<string name="message_flag">Appuyez sur le drapeau pour arrêter</string>
+	<string name="message_country">Choisissez un pays...</string>
+	<string name="flag_set">Appuyez sur le drapeau pour le mettre en plein écran et jouer l\'hymne du pays</string>
+
+	<string name="Ok">OK</string>
+	<string name="quit_title">Quitter ?</string>
+	<string name="quit_message">Voulez-vous quitter cette application?</string>
+	<string name="yes">Oui</string>
+	<string name="no">Non</string>
+	<string name="goingon">L\'application continue</string>
+
+	<string name="changelog_title">Nouveautés</string>
+	<string name="about_title">A propos</string>
+
+	<string name="volume_title">Volume ?</string>
+	<string name="volume_question">Le volume de votre téléphone est assez bas, voulez-vous mettre le son au MAX?</string>
+	<string name="volume_yes">Oui, mettre à fond!</string>
+	<string name="volume_no">Non, laisser comme il est...</string>
+
+	<string name="share_with">Partager avec...</string>
+	<string name="share_title">Un ami vous recommande...</string>
+	<string name="share_link">http://market.android.com/details?id=com.kiof.hymne</string>
+	
+	<string name="other_link">market://search?q=pub:Kiof</string>
+	
+	<string name="menuTitle1">Options</string>
+	<string name="menuTitleCondensed1">Options</string>
+	<string name="menuTitle2">Envoyer à un ami</string>
+	<string name="menuTitleCondensed2">Partager</string>
+	<string name="menuTitle3">Plus d\'applications gratuites</string>
+	<string name="menuTitleCondensed3">Plus d\'applications</string>
+	<string name="menuTitle4">A propos...</string>
+	<string name="menuTitleCondensed4">A propos</string>
+	<string name="menuTitle5">Quitter l\'application</string>
+	<string name="menuTitleCondensed5">Quitter</string>
+	    
+	<string name="preference_category_volume">Volume</string>
+	<string name="checkvolume_title">Vérifier le volume</string>
+	<string name="checkvolume_summary">Vérifier que le volume est suffisamment élevé au démarrage</string>
+	<string name="volumemax_title">Mettre au maximum</string>
+	<string name="volumemax_summary">Réglez le volume au maximum au démarrage</string>
+	<string name="volumerestore_title">Restaurer le volume</string>
+	<string name="volumerestore_summary">Restaurer le volume précédent lors de la sortie de l\'application</string>
+	<string name="preference_category_features">Fonctionnement</string>
+	<string name="autoplay_title">Jouer l\'hymne</string>
+	<string name="autoplay_summary">Jouer l\'hymne sur l\'écran du drapeau</string>
+	<string name="synchro_title">Synchroniser avec les autres téléphones</string>
+	<string name="synchro_summary">Synchronise la musique avec les autres téléphones (nécessite que le GPS ou le réseau soient opérationnel)</string>
+	<string name="keepmycountry_title">Enregistrer le dernier séléctionné</string>
+	<string name="keepmycountry_summary">Gardez le dernier pays sélectionné en mémoire</string>
+	<string name="save_setting">Enregistrer les paramètres</string>
+	<string name="setting_saved">Paramètres enregistrés</string>
+	    
+	<string-array name="countries">
+		<item>Albanie</item>
+		<item>Andorre</item>
+		<item>Autriche</item>
+		<item>Belgique</item>
+		<item>Brésil</item>
+		<item>Bulgarie</item>
+		<item>Canada</item>
+		<item>Croatie</item>
+		<item>Chypre</item>
+		<item>République Tchèque</item>
+		<item>Danemark</item>
+		<item>Estonie</item>
+		<item>France</item>
+		<item>Allemagne</item>
+		<item>Grèce</item>
+		<item>Hongrie</item>
+		<item>Islande</item>
+		<item>Irlande</item>
+		<item>Italie</item>
+		<item>Liechtenstein</item>
+		<item>Luxembourg</item>
+		<item>Monaco</item>
+		<item>Pays-Bas</item>
+		<item>Norvège</item>
+		<item>Pologne</item>
+		<item>Portugal</item>
+		<item>Roumanie</item>
+		<item>Russie</item>
+		<item>Espagne</item>
+		<item>Suède</item>
+		<item>Suisse</item>
+		<item>Ukraine</item>
+		<item>Royaume Uni</item>
+		<item>Etats-Unis</item>
+		<item>Vatican</item>
+	</string-array>
+
+</resources>

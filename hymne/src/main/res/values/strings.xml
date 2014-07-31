@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Support your Country</string>
+	<string name="message_flag">Press to return to the list</string>
+	<string name="message_country">Choose a country...</string>
+	<string name="flag_set">Press the flag to put in full screen and play the anthem of the country</string>
+
+    <string name="ad_unit_id" translatable="false">ca-app-pub-3294765052683520/4334697205</string>
+
+    <string name="Ok">OK</string>
+	<string name="quit_title">Quit ?</string>
+	<string name="quit_message">Do you want to leave this application?</string>
+	<string name="yes">Yes</string>
+	<string name="no">No</string>
+	<string name="goingon">The application goes on</string>
+
+	<string name="changelog_title">New</string>
+	<string name="about_title">About</string>
+
+	<string name="volume_title">Volume ?</string>
+	<string name="volume_question">The volume of your phone is low, do you want to set it to MAX?</string>
+	<string name="volume_yes">Yes, set to max!</string>
+	<string name="volume_no">No, do not change volume...</string>
+
+	<string name="share_with">Share with...</string>
+	<string name="share_title">A friend recommend you...</string>
+	<string name="share_link">http://market.android.com/details?id=com.kiof.hymne</string>
+	
+	<string name="other_link">market://search?q=pub:Kiof</string>
+	
+	<string name="menuTitle1">Options</string>
+	<string name="menuTitleCondensed1">Options</string>
+	<string name="menuTitle2">Send to a friend</string>
+	<string name="menuTitleCondensed2">Share</string>
+	<string name="menuTitle3">More free applications</string>
+	<string name="menuTitleCondensed3">More apps</string>
+	<string name="menuTitle4">About...</string>
+	<string name="menuTitleCondensed4">About</string>
+	<string name="menuTitle5">Quit</string>
+	<string name="menuTitleCondensed5">Quit</string>
+
+	<string name="preference_category_volume">Volume check</string>
+	<string name="checkvolume_title">Check Volume</string>
+	<string name="checkvolume_summary">Check that volume is high enough on startup</string>
+	<string name="volumemax_title">Volume Max</string>
+	<string name="volumemax_summary">Set volume to maximum on startup</string>
+	<string name="volumerestore_title">Volume Restore</string>
+	<string name="volumerestore_summary">Restore the previous volume level when exiting the application</string>
+	<string name="preference_category_features">Features</string>
+	<string name="autoplay_title">Play anthem</string>
+	<string name="autoplay_summary">Play anthem on flag screen</string>
+	<string name="synchro_title">Sync with other phones</string>
+	<string name="synchro_summary">Sync the music with other phones (require GPS or network to be operational)</string>
+	<string name="keepmycountry_title">Keep last selected</string>
+	<string name="keepmycountry_summary">Keep last country selected in memory</string>
+	<string name="save_setting">Save settings</string>
+	<string name="setting_saved">Settings saved</string>
+
+	<string-array name="countries">
+		<item>Albania</item>
+		<item>Andorra</item>
+		<item>Austria</item>
+		<item>Belgium</item>
+		<item>Brazil</item>
+		<item>Bulgaria</item>
+		<item>Canada</item>
+		<item>Croatia</item>
+		<item>Cyprus</item>
+		<item>Czech Republic</item>
+		<item>Denmark</item>
+		<item>Estonia</item>
+		<item>France</item>
+		<item>Germany</item>
+		<item>Greece</item>
+		<item>Hungary</item>
+		<item>Iceland</item>
+		<item>Ireland</item>
+		<item>Italy</item>
+		<item>Liechtenstein</item>
+		<item>Luxembourg</item>
+		<item>Monaco</item>
+		<item>Netherlands</item>
+		<item>Norway</item>
+		<item>Poland</item>
+		<item>Portugal</item>
+		<item>Romania</item>
+		<item>Russia</item>
+		<item>Spain</item>
+		<item>Sweden</item>
+		<item>Switzerland</item>
+		<item>Ukraine</item>
+		<item>United Kingdom</item>
+		<item>United States</item>
+		<item>Vatican</item>
+	</string-array>
+
+</resources>
