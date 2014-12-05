@@ -1,23 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<pre-dex-items>
+<items version="2" >
 
     <item
-        dex="D:\Temp\Android\ASProjects\Hymne\hymne\build\intermediates\pre-dexed\debug\classes-b12a78d8b841547d18d026dd4b27203ecda55ae7.jar"
-        jar="D:\Temp\Android\ASProjects\Hymne\hymne\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\classes.jar"
+        jar="/mnt/System/Temp/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
         jumboMode="false"
-        revision="19.1.0"
-        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
+        revision="21.1.1"
+        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
+        <dex dex="/mnt/System/Temp/Android/ASProjects/Hymne/hymne/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-d9fcfd3a5c88e77b464ced0d67cd447ecbafd011.jar" />
+    </item>
     <item
-        dex="D:\Temp\Android\ASProjects\Hymne\hymne\build\intermediates\pre-dexed\debug\support-v4-19.1.0-33f6d4e2ac35778c92ee7ff2380b795f206df90f.jar"
-        jar="D:\Temp\Android\android-studio\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jar="/mnt/System/Temp/Android/ASProjects/Hymne/hymne/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/classes.jar"
         jumboMode="false"
-        revision="19.1.0"
-        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+        revision="21.1.1"
+        sha1="0f6d5c1ef2e982c3b7858408e3df389cf5d202da">
+        <dex dex="/mnt/System/Temp/Android/ASProjects/Hymne/hymne/build/intermediates/pre-dexed/debug/classes-9a9a5ca25ac58045d37568dd3a5b2dbc2e514f52.jar" />
+    </item>
     <item
-        dex="D:\Temp\Android\ASProjects\Hymne\hymne\build\intermediates\pre-dexed\debug\classes-1f689793985651eedc52939357034b45bb823639.jar"
-        jar="D:\Temp\Android\ASProjects\Hymne\hymne\build\intermediates\exploded-aar\com.google.android.gms\play-services\5.0.77\classes.jar"
+        jar="/mnt/System/Temp/Android/ASProjects/Hymne/hymne/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/classes.jar"
         jumboMode="false"
-        revision="19.1.0"
-        sha1="b6a82434c1eca686607867cd906bcc80ed987837"/>
+        revision="21.1.1"
+        sha1="95fd37732ec852e99f07eeb516a3650172f1d136">
+        <dex dex="/mnt/System/Temp/Android/ASProjects/Hymne/hymne/build/intermediates/pre-dexed/debug/classes-b0c809834e4ce5a5c4a4943bbd8b5607859152b1.jar" />
+    </item>
+    <item
+        jar="/mnt/System/Temp/Android/ASProjects/Hymne/hymne/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/libs/internal_impl-21.0.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
+        <dex dex="/mnt/System/Temp/Android/ASProjects/Hymne/hymne/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-7a80034d7580e17b15d95f8a1e7bd487b5b11b20.jar" />
+    </item>
+    <item
+        jar="/mnt/System/Temp/Android/ASProjects/Hymne/hymne/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="686344a780033e4ba22b926cd225f8d4941247e6">
+        <dex dex="/mnt/System/Temp/Android/ASProjects/Hymne/hymne/build/intermediates/pre-dexed/debug/classes-03135fb17e9c0fb2337176c654885cb2b5026754.jar" />
+    </item>
 
-</pre-dex-items>
+</items>
