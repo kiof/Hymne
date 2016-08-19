@@ -1,30 +1,20 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion '21.1.1'
-
+    compileSdkVersion 24
+    buildToolsVersion '24.0.1'
     defaultConfig {
         applicationId 'com.kiof.hymne'
         minSdkVersion 10
-        targetSdkVersion 21
-        versionCode 16
-        versionName '1.96'
-    }
-
-    buildTypes {
-        release {
-//            runProguard true
-            proguardFiles getDefaultProguardFile('proguard-android.txt')
-        }
+        targetSdkVersion 24
+        versionCode 17
+        versionName '1.97'
     }
     productFlavors {
     }
 }
-
 dependencies {
-    compile 'com.android.support:appcompat-v7:21.0.0'
-    compile 'com.android.support:support-v4:21.0.0'
-    compile 'com.google.android.gms:play-services:6.1.71'
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.google.android.gms:play-services-ads:9.4.0'
 }
+
+
