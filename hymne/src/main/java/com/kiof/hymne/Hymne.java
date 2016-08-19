@@ -324,7 +324,7 @@ public class Hymne extends Activity implements LocationListener {
             }
 
             Log.d(TAG, "stat : " + stat);
-            postStat("http://kiof.free.fr/stats.php?", stat.toString());
+            // postStat("http://kiof.free.fr/stats.php?", stat.toString());
         }
     }
 
@@ -344,7 +344,7 @@ public class Hymne extends Activity implements LocationListener {
                     httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 //					Log.d(TAG, "httpPost : " + httpPost.getAllHeaders());
 
-                    /* Set TCP_NODELAY to true to reduce request latency (counterpart is increasing bandwidth usage) */
+                    // Set TCP_NODELAY to true to reduce request latency (counterpart is increasing bandwidth usage)
 //                    HttpParams httpParams = null;
 //                    httpParams = httpParams.setBooleanParameter(CoreConnectionPNames.TCP_NODELAY, true);
 //                    httpClient.setParams(httpParams);

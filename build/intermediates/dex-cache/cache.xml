@@ -2,39 +2,74 @@
 <items version="2" >
 
     <item
-        jar="/mnt/System/Temp/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.0/support-annotations-21.0.0.jar"
+        jar="C:\Utilisateurs\fr20222\Temp\AndroidStudioProjects\Hymne\hymne\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.4.0\jars\classes.jar"
         jumboMode="false"
-        revision="21.1.1"
-        sha1="1a578b9607b36266c63d43a4fa0ab5664dbe911e">
-        <dex dex="/mnt/System/Temp/Android/ASProjects/Hymne/hymne/build/intermediates/pre-dexed/debug/support-annotations-21.0.0-d9fcfd3a5c88e77b464ced0d67cd447ecbafd011.jar" />
+        revision="24.0.1"
+        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
+        <dex dex="C:\Utilisateurs\fr20222\Temp\AndroidStudioProjects\Hymne\hymne\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-tasks-9.4.0_6d50b440c91989cc735dbab1a82f4d00c77c2a6c.jar" />
     </item>
     <item
-        jar="/mnt/System/Temp/Android/ASProjects/Hymne/hymne/build/intermediates/exploded-aar/com.google.android.gms/play-services/6.1.71/classes.jar"
+        jar="C:\Utilisateurs\fr20222\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
         jumboMode="false"
-        revision="21.1.1"
-        sha1="0f6d5c1ef2e982c3b7858408e3df389cf5d202da">
-        <dex dex="/mnt/System/Temp/Android/ASProjects/Hymne/hymne/build/intermediates/pre-dexed/debug/classes-9a9a5ca25ac58045d37568dd3a5b2dbc2e514f52.jar" />
+        revision="24.0.1"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="C:\Utilisateurs\fr20222\Temp\AndroidStudioProjects\Hymne\hymne\build\intermediates\pre-dexed\release\support-annotations-23.0.0_ecb36c7c6620b0fe882ab5a805be2b01653baf6e.jar" />
     </item>
     <item
-        jar="/mnt/System/Temp/Android/ASProjects/Hymne/hymne/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.0/classes.jar"
+        jar="C:\Utilisateurs\fr20222\Temp\AndroidStudioProjects\Hymne\hymne\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
         jumboMode="false"
-        revision="21.1.1"
-        sha1="95fd37732ec852e99f07eeb516a3650172f1d136">
-        <dex dex="/mnt/System/Temp/Android/ASProjects/Hymne/hymne/build/intermediates/pre-dexed/debug/classes-b0c809834e4ce5a5c4a4943bbd8b5607859152b1.jar" />
+        revision="24.0.1"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="C:\Utilisateurs\fr20222\Temp\AndroidStudioProjects\Hymne\hymne\build\intermediates\pre-dexed\release\com.android.support-support-v4-23.0.0_a9c9358df757bbf7a729369909a32e138f42aaae.jar" />
     </item>
     <item
-        jar="/mnt/System/Temp/Android/ASProjects/Hymne/hymne/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/libs/internal_impl-21.0.0.jar"
+        jar="C:\Utilisateurs\fr20222\Temp\AndroidStudioProjects\Hymne\hymne\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.4.0\jars\classes.jar"
         jumboMode="false"
-        revision="21.1.1"
-        sha1="1609e6d42d0480b0f4188e2c29f75388fa12a8f0">
-        <dex dex="/mnt/System/Temp/Android/ASProjects/Hymne/hymne/build/intermediates/pre-dexed/debug/internal_impl-21.0.0-7a80034d7580e17b15d95f8a1e7bd487b5b11b20.jar" />
+        revision="24.0.1"
+        sha1="147edbec6bcea71fd675ecc63cae3319637ec2b4">
+        <dex dex="C:\Utilisateurs\fr20222\Temp\AndroidStudioProjects\Hymne\hymne\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-ads-lite-9.4.0_c133e8dcd8f2b624b06da701b9c623c790db2427.jar" />
     </item>
     <item
-        jar="/mnt/System/Temp/Android/ASProjects/Hymne/hymne/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.0/classes.jar"
+        jar="C:\Utilisateurs\fr20222\Temp\AndroidStudioProjects\Hymne\hymne\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.4.0\jars\classes.jar"
         jumboMode="false"
-        revision="21.1.1"
-        sha1="686344a780033e4ba22b926cd225f8d4941247e6">
-        <dex dex="/mnt/System/Temp/Android/ASProjects/Hymne/hymne/build/intermediates/pre-dexed/debug/classes-03135fb17e9c0fb2337176c654885cb2b5026754.jar" />
+        revision="24.0.1"
+        sha1="d463d8eec1e6c1feef2cec6675ccb47e37c12ee1">
+        <dex dex="C:\Utilisateurs\fr20222\Temp\AndroidStudioProjects\Hymne\hymne\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-ads-9.4.0_f40fb20d7d50e2e522ddbf44a60da06f35ba88f6.jar" />
+    </item>
+    <item
+        jar="C:\Utilisateurs\fr20222\Temp\AndroidStudioProjects\Hymne\hymne\build\intermediates\exploded-aar\com.google.android.gms\play-services-clearcut\9.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="dd763e0269f2854f5828ae62dd968b80bff6a0db">
+        <dex dex="C:\Utilisateurs\fr20222\Temp\AndroidStudioProjects\Hymne\hymne\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-clearcut-9.4.0_d48f22d0d07e94481fcabf94c2311a012f4786ae.jar" />
+    </item>
+    <item
+        jar="C:\Utilisateurs\fr20222\Temp\AndroidStudioProjects\Hymne\hymne\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
+        <dex dex="C:\Utilisateurs\fr20222\Temp\AndroidStudioProjects\Hymne\hymne\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-basement-9.4.0_3a58a371252e326c27fd3a1ed60b1bcb164c25f7.jar" />
+    </item>
+    <item
+        jar="C:\Utilisateurs\fr20222\Temp\AndroidStudioProjects\Hymne\hymne\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
+        <dex dex="C:\Utilisateurs\fr20222\Temp\AndroidStudioProjects\Hymne\hymne\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-base-9.4.0_98e2622930654c71c6f134cf2b303830ba98802a.jar" />
+    </item>
+    <item
+        jar="C:\Utilisateurs\fr20222\Temp\AndroidStudioProjects\Hymne\hymne\build\intermediates\exploded-aar\com.google.android.gms\play-services-gass\9.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="b15f898c9047f9d612a63000126b485dd024eaac">
+        <dex dex="C:\Utilisateurs\fr20222\Temp\AndroidStudioProjects\Hymne\hymne\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-gass-9.4.0_23a85e076052d15913d0d33b12455434a04e4810.jar" />
+    </item>
+    <item
+        jar="C:\Utilisateurs\fr20222\Temp\AndroidStudioProjects\Hymne\hymne\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="24.0.1"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="C:\Utilisateurs\fr20222\Temp\AndroidStudioProjects\Hymne\hymne\build\intermediates\pre-dexed\release\internal_impl-23.0.0_c07fa71b90e17905936a35cc48e5230c38a86924.jar" />
     </item>
 
 </items>

@@ -3,6 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 24
     buildToolsVersion '24.0.1'
+    useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId 'com.kiof.hymne'
         minSdkVersion 10
@@ -15,6 +16,6 @@ android {
 }
 dependencies {
     compile 'com.google.android.gms:play-services-ads:9.4.0'
+    // compile group: 'cz.msebera.android' , name: 'httpclient', version: '4.4.1.1'
 }
-
 
