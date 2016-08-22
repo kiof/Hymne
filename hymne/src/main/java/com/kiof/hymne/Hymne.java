@@ -1,27 +1,7 @@
 package com.kiof.hymne;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.params.CoreConnectionPNames;
-import org.apache.http.params.HttpParams;
-import org.json.JSONException;
-
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Application;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -33,11 +13,8 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
-import android.location.GpsStatus;
-import android.location.GpsStatus.NmeaListener;
 import android.location.Location;
 import android.location.LocationListener;
-import android.location.LocationManager;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -64,14 +41,29 @@ import android.widget.ViewSwitcher;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.common.api.GoogleApiClient;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.message.BasicNameValuePair;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Hymne extends Activity implements LocationListener {
     private Context mContext;
     private SharedPreferences mSharedPreferences;
     private AudioManager mAudioManager;
     private MediaPlayer mMediaPlayer = null;
-    private LocationManager mLocationManager;
-    private NmeaListener mNmeaListener;
+//    private LocationManager mLocationManager;
+//    private NmeaListener mNmeaListener;
     private ViewSwitcher mViewSwitcher;
 
     private static final String MY_COUNTRY = "mycountry";
@@ -84,9 +76,10 @@ public class Hymne extends Activity implements LocationListener {
     private static final String TAG = "HymneActivity";
     private static final String NTP_SERVER = "pool.ntp.org";
     //	private static final String NTP_SERVER = "fr.ntp.org";
-//	private static final String NTP_SERVER = "canon.inria.fr";
+    //	private static final String NTP_SERVER = "canon.inria.fr";
     private static final int NTP_NB_TRY = 5;
     private static final int NTP_SLEEP_TIME = 1000;
+    @SuppressWarnings("unused")
     private static final int TIME_WAIT = 3;
     private static final int RETURN_SETTING = 1;
     private static final int NETWORK_TIMEOUT = 10000;
@@ -96,6 +89,11 @@ public class Hymne extends Activity implements LocationListener {
     private int myCountry;
     private int initVolume;
     private long gpsTime = 0, gpsDelta = 0, ntpTime = 0, ntpDelta = 0, newDelta = 0, sysTime = 0;
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -103,12 +101,20 @@ public class Hymne extends Activity implements LocationListener {
         mContext = this.getApplicationContext();
         Resources mResources = this.getResources();
         mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(mContext);
-        mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
+       /* mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         // Register NMEA listener
-        mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
-        createNmeaListener();
-//		mLocationManager.addNmeaListener(mNmeaListener);
+        if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            int TAG_CODE_PERMISSION_FINE_LOCATION = 1;
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, TAG_CODE_PERMISSION_FINE_LOCATION);
+            return;
+        }
+
+        if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+            createNmeaListener();
+            // mLocationManager.addNmeaListener(mNmeaListener);
+        }*/
 
         // Launch Sntp request
         createSntp();
@@ -178,7 +184,6 @@ public class Hymne extends Activity implements LocationListener {
                         mAudioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC), AudioManager.FLAG_SHOW_UI);
             }
         }
-
     }
 
     @Override
@@ -250,8 +255,11 @@ public class Hymne extends Activity implements LocationListener {
     protected void onStop() {
         super.onStop();
         if (mMediaPlayer != null) mMediaPlayer.release();
-        mLocationManager.removeNmeaListener(mNmeaListener);
-        mLocationManager.removeUpdates(this);
+        /*if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            mLocationManager.removeNmeaListener(mNmeaListener);
+            mLocationManager.removeUpdates(this);
+            return;
+        }*/
     }
 
     protected void onDestroy() {
@@ -300,31 +308,19 @@ public class Hymne extends Activity implements LocationListener {
             }
 
             StringBuilder stat = new StringBuilder();
-            stat.append(sysTime + "|" + gpsTime + "|" + gpsDelta + "|" + ntpTime
-                    + "|" + ntpDelta + "|" + absTime);
-            stat.append("|" + myCountry + "|" + duration + "|" + msec);
-            stat.append("|" + System.getProperty("os.name") + "|"
-                    + System.getProperty("os.version") + "|"
-                    + System.getProperty("os.arch") + "|"
-                    + System.getProperty("user.region") + "|"
-                    + System.getProperty("http.agent"));
-            stat.append("|" + Build.BOARD + "|" + Build.BOOTLOADER + "|"
-                    + Build.BRAND + "|" + Build.CPU_ABI + "|" + Build.CPU_ABI2
-                    + "|" + Build.DEVICE + "|" + Build.DISPLAY + "|"
-                    + Build.FINGERPRINT + "|" + Build.HARDWARE + "|" + Build.HOST
-                    + "|" + Build.ID + "|" + Build.MANUFACTURER + "|" + Build.MODEL
-                    + "|" + Build.PRODUCT + "|" + Build.RADIO + "|" + Build.SERIAL
-                    + "|" + Build.TAGS + "|" + Build.TIME + "|" + Build.TYPE + "|"
-                    + Build.UNKNOWN + "|" + Build.USER);
+            stat.append(sysTime).append("|").append(gpsTime).append("|").append(gpsDelta).append("|").append(ntpTime).append("|").append(ntpDelta).append("|").append(absTime);
+            stat.append("|").append(myCountry).append("|").append(duration).append("|").append(msec);
+            stat.append("|").append(System.getProperty("os.name")).append("|").append(System.getProperty("os.version")).append("|").append(System.getProperty("os.arch")).append("|").append(System.getProperty("user.region")).append("|").append(System.getProperty("http.agent"));
+            stat.append("|").append(Build.BOARD).append("|").append(Build.BOOTLOADER).append("|").append(Build.BRAND).append("|").append(Build.CPU_ABI).append("|").append(Build.CPU_ABI2).append("|").append(Build.DEVICE).append("|").append(Build.DISPLAY).append("|").append(Build.FINGERPRINT).append("|").append(Build.HARDWARE).append("|").append(Build.HOST).append("|").append(Build.ID).append("|").append(Build.MANUFACTURER).append("|").append(Build.MODEL).append("|").append(Build.PRODUCT).append("|").append(Build.RADIO).append("|").append(Build.SERIAL).append("|").append(Build.TAGS).append("|").append(Build.TIME).append("|").append(Build.TYPE).append("|").append(Build.UNKNOWN).append("|").append(Build.USER);
             try {
-                stat.append("|" + getPackageManager().getPackageInfo(getPackageName(), 0).versionName);
+                stat.append("|").append(getPackageManager().getPackageInfo(getPackageName(), 0).versionName);
             } catch (NameNotFoundException e) {
                 e.printStackTrace();
                 stat.append("|NA");
             }
 
             Log.d(TAG, "stat : " + stat);
-            // postStat("http://kiof.free.fr/stats.php?", stat.toString());
+            postStat("http://kiof.free.fr/stats.php?", stat.toString());
         }
     }
 
@@ -432,8 +428,8 @@ public class Hymne extends Activity implements LocationListener {
         thread.start();
     }
 
-    private void createNmeaListener() {
-        mNmeaListener = new GpsStatus.NmeaListener() {
+/*    private void createNmeaListener() {
+        mNmeaListener = new NmeaListener() {
             private static final String NMEA = "$GPRMC";
 
             public void onNmeaReceived(long timestamp, String nmea) {
@@ -464,19 +460,21 @@ public class Hymne extends Activity implements LocationListener {
 //						gpsDelta = gpsTime - System.currentTimeMillis() - (SystemClock.elapsedRealtime() - startNmea);
                         Log.d(TAG, "gpsTime : " + gpsTime + "(" + gpsDelta + ")");
                         //					Log.d(TAG, "Delta clock : " + (SystemClock.elapsedRealtime() - startNmea));
-                    } catch (java.text.ParseException e) {
+                    } catch (ParseException e) {
                         e.printStackTrace();
                     }
                 }
 
                 if (gpsTime != 0) {
-                    mLocationManager.removeNmeaListener(mNmeaListener);
-                    mLocationManager.removeUpdates(Hymne.this);
-                    Log.d(TAG, "removeNmeaListener");
+                    if (ActivityCompat.checkSelfPermission(mContext, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                        mLocationManager.removeNmeaListener(mNmeaListener);
+                        mLocationManager.removeUpdates(Hymne.this);
+                        Log.d(TAG, "removeNmeaListener");
+                    }
                 }
             }
         };
-    }
+    }*/
 
     private void setMyFlag(int position) {
         // Save country to preferences
