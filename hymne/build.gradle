@@ -19,7 +19,7 @@ android {
     }
 }
 dependencies {
-    compile 'com.google.android.gms:play-services-ads:9.4.0'
     // compile group: 'cz.msebera.android' , name: 'httpclient', version: '4.4.1.1'
+    compile 'com.google.android.gms:play-services-ads:9.4.0'
 }
 

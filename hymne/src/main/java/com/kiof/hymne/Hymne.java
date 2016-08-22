@@ -45,7 +45,6 @@ import com.google.android.gms.common.api.GoogleApiClient;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
@@ -53,7 +52,6 @@ import org.apache.http.message.BasicNameValuePair;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -79,7 +77,6 @@ public class Hymne extends Activity implements LocationListener {
     //	private static final String NTP_SERVER = "canon.inria.fr";
     private static final int NTP_NB_TRY = 5;
     private static final int NTP_SLEEP_TIME = 1000;
-    @SuppressWarnings("unused")
     private static final int TIME_WAIT = 3;
     private static final int RETURN_SETTING = 1;
     private static final int NETWORK_TIMEOUT = 10000;
@@ -88,6 +85,7 @@ public class Hymne extends Activity implements LocationListener {
     private TypedArray sounds;
     private int myCountry;
     private int initVolume;
+    @SuppressWarnings("FieldCanBeLocal")
     private long gpsTime = 0, gpsDelta = 0, ntpTime = 0, ntpDelta = 0, newDelta = 0, sysTime = 0;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
@@ -346,12 +344,6 @@ public class Hymne extends Activity implements LocationListener {
 //                    httpClient.setParams(httpParams);
 
                     httpResponse = httpClient.execute(httpPost);
-                } catch (UnsupportedEncodingException e) {
-                    e.printStackTrace();
-//					Toast.makeText(mContext, "UnsupportedEncodingException", Toast.LENGTH_SHORT).show();
-                } catch (ClientProtocolException e) {
-                    e.printStackTrace();
-//					Toast.makeText(mContext, "ClientProtocolException", Toast.LENGTH_SHORT).show();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -360,15 +352,9 @@ public class Hymne extends Activity implements LocationListener {
                     InputStream inputStream = null;
                     try {
                         inputStream = httpResponse.getEntity().getContent();
-                    } catch (IllegalStateException e) {
-                        e.printStackTrace();
-//						Toast.makeText(mContext, "IllegalStateException", Toast.LENGTH_SHORT).show();
-                    } catch (IOException e) {
+                    } catch (IllegalStateException | IOException e) {
                         e.printStackTrace();
                     }
-//					Toast.makeText(mContext, inputStream.toString(), Toast.LENGTH_SHORT).show();
-                } else {
-//					Toast.makeText(mContext, "httpResponse null", Toast.LENGTH_SHORT).show();
                 }
                 Looper.loop(); // Loop in the message queue
             }
@@ -398,7 +384,7 @@ public class Hymne extends Activity implements LocationListener {
                     if (ntpDelta == 0 || (newDelta != 0 && newDelta < ntpDelta)) {
                         ntpDelta = newDelta;
                     }
-                    ;
+
                     if (ntpMin1 == 0 || (newDelta != 0 && newDelta < ntpMin1)) {
                         ntpMin3 = ntpMin2;
                         ntpMin2 = ntpMin1;
@@ -535,9 +521,10 @@ public class Hymne extends Activity implements LocationListener {
             return position;
         }
 
+        /*
         public int getItemRessourceId(int position) {
             return flags.getResourceId(position, 0);
-        }
+        }*/
 
         public View getView(int position, View convertView, ViewGroup parent) {
             ImageView imageView = new ImageView(mContext);
