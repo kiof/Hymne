@@ -41,6 +41,7 @@ import android.widget.ViewSwitcher;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 import org.apache.http.HttpResponse;
@@ -56,14 +57,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Hymne extends Activity implements LocationListener {
-    private Context mContext;
-    private SharedPreferences mSharedPreferences;
-    private AudioManager mAudioManager;
-    private MediaPlayer mMediaPlayer = null;
-//    private LocationManager mLocationManager;
-//    private NmeaListener mNmeaListener;
-    private ViewSwitcher mViewSwitcher;
-
     private static final String MY_COUNTRY = "mycountry";
     private static final String CHECK_VOLUME = "checkvolume";
     private static final String VOLUME_MAX = "volumemax";
@@ -80,6 +73,13 @@ public class Hymne extends Activity implements LocationListener {
     private static final int TIME_WAIT = 3;
     private static final int RETURN_SETTING = 1;
     private static final int NETWORK_TIMEOUT = 10000;
+    private Context mContext;
+    private SharedPreferences mSharedPreferences;
+    private AudioManager mAudioManager;
+    private MediaPlayer mMediaPlayer = null;
+    //    private LocationManager mLocationManager;
+//    private NmeaListener mNmeaListener;
+    private ViewSwitcher mViewSwitcher;
     private String[] countries;
     private TypedArray flags;
     private TypedArray sounds;
@@ -119,6 +119,8 @@ public class Hymne extends Activity implements LocationListener {
 
         setContentView(R.layout.main);
 
+        // AdMob
+        MobileAds.initialize(getApplicationContext(), getString(R.string.ad_unit_id));
         AdView adView = (AdView) this.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder()
                 .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
@@ -496,6 +498,26 @@ public class Hymne extends Activity implements LocationListener {
         mTextView1.setText(R.string.flag_set);
     }
 
+    @Override
+    public void onLocationChanged(Location location) {
+
+    }
+
+    @Override
+    public void onStatusChanged(String provider, int status, Bundle extras) {
+
+    }
+
+    @Override
+    public void onProviderEnabled(String provider) {
+
+    }
+
+    @Override
+    public void onProviderDisabled(String provider) {
+
+    }
+
     public class ImageAdapter extends BaseAdapter {
         final int mGalleryItemBackground;
         private final Context mContext;
@@ -533,30 +555,10 @@ public class Hymne extends Activity implements LocationListener {
             imageView.setLayoutParams(new Gallery.LayoutParams(300, 200));
             imageView.setScaleType(ImageView.ScaleType.FIT_XY);
             imageView.setBackgroundResource(mGalleryItemBackground);
-//			imageView.setRotation(90);			
+//			imageView.setRotation(90);
 
             return imageView;
         }
-    }
-
-    @Override
-    public void onLocationChanged(Location location) {
-
-    }
-
-    @Override
-    public void onStatusChanged(String provider, int status, Bundle extras) {
-
-    }
-
-    @Override
-    public void onProviderEnabled(String provider) {
-
-    }
-
-    @Override
-    public void onProviderDisabled(String provider) {
-
     }
 
 }

@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion '24.0.1'
+    buildToolsVersion '24.0.2'
     useLibrary 'org.apache.http.legacy'
     defaultConfig {
         applicationId 'com.kiof.hymne'
@@ -19,7 +19,14 @@ android {
     }
 }
 dependencies {
-    // compile group: 'cz.msebera.android' , name: 'httpclient', version: '4.4.1.1'
+    // AdMob
     compile 'com.google.android.gms:play-services-ads:9.4.0'
+    // Firebase
+    compile 'com.google.firebase:firebase-core:9.4.0'
+    compile 'com.google.firebase:firebase-ads:9.4.0'
+    // Analytics
+    compile 'com.google.android.gms:play-services-analytics:9.4.0'
 }
+// Firebase & Analytics
+apply plugin: 'com.google.gms.google-services'
 
